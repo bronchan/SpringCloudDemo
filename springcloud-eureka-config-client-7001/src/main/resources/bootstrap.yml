@@ -1,0 +1,8 @@
+# 系统级别
+spring:
+  cloud:
+    config:
+      uri: http://localhost:9966  #直接使用上一个项目来获取配置文件即可
+      name: config-eureka # 需要从git上读取的资源名称，不要要后缀
+      profile: dev  # 使用的开发环境
+      label: master  # 使用分支，默认为主分支

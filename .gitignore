@@ -1,0 +1,15 @@
+# 项目排除路径
+/SpringCloud-api/target/
+/springcloud-config-server-9966/target/
+/springcloud-consumer-dept-8000/target/
+/springcloud-consumer-dept-feign-8000/target/
+/springcloud-consumer-hystrix-dashborad-9000/target/
+/springcloud-eureka-7001/target/
+/springcloud-eureka-7002/target/
+/springcloud-eureka-7003/target/
+/springcloud-eureka-config-client-7001/target/
+/springcloud-provider-dept-8001/target/
+/springcloud-provider-dept-8002/target/
+/springcloud-provider-dept-8003/target/
+/springcloud-provider-dept-hystrix-8001/target/
+/springcloud-zuul-9527/target/

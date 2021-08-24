@@ -1,0 +1,25 @@
+server:
+  port: 9527
+spring:
+  application:
+    name: springcloud-zuul
+# eureka 配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: zuul9527.com  #修改Eureka上的默认描述信息
+    prefer-ip-address: true  # 为true可以显示服务的ip地址
+info:
+  app.name: chan-springcloud
+  company.name: blog.bronchan.com
+
+#zuul配置
+zuul:
+  routes:
+    mydept.serviceId: SPRINGCLOUD-PROVIDER-DEPT  # 原来的id
+    mydept.path: /mydept/**  # serviceId 和 path 是配套使用的，前面的mydept可以随便
+  ignored-services: SPRINGCLOUD-PROVIDER-DEPT  #不能再使用这个路径访问了  这是yml的数组表示方式   *  表示隐藏所有服务
+    # 没有加上面的忽略配置可以直接通过http://localhost:9527/springcloud-provider-dept/dept/get/1访问
+  prefix: /chan     # 这个是前缀  比如： http://localhost:9527/chan/mydept/dept/get/1

@@ -1,0 +1,13 @@
+server:
+  port: 9966
+
+
+spring:
+  application:
+    name: springcloud-config-server
+  # 连接远程仓库，先把连接远程配置写在这里
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/bronchan/springcloud-config.git  #https的
